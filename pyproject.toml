@@ -1,0 +1,49 @@
+[project]
+name = "hexastack-template"
+version = "0.1.0"
+description = "Official enterprise Python hexagonal architecture template with CQRS, FastAPI, NiceGUI DevTools, and Day-1 AI guardrails."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "hexastack[db,fastapi,qual,sentry,ui]>=0.7.0",
+]
+
+[project.scripts]
+hexastack-template = "hexastack_template.adapters.driving.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "hexaqual[all]>=0.9.0",
+]
+
+[tool.complexipy]
+max_complexity_allowed = 25
+
+[tool.coverage.run]
+source = ["src/"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "-n auto --import-mode=importlib --cov=src --cov-fail-under=90 --cov-report=term-missing"
+
+[tool.ruff.lint]
+select = ["B", "D", "E", "F", "I", "S", "SIM", "UP", "W"]
+ignore = ["D100", "D104", "D107", "E501"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest-gremlins]
+paths = ["src"]
+operators = ["arithmetic", "boolean", "boundary", "comparison", "return"]
+workers = "auto"
+batch_size = 10
+cache = true

@@ -1,0 +1,34 @@
+[importlinter]
+root_package = hexastack_template
+include_type_checking = False
+
+# 1. Strict Dependency Inversion: Infra -> Adapters -> Ports -> Domain
+[importlinter:contract:hexagonal-layers]
+name = Hexagonal Architecture Layers
+type = layers
+containers =
+    hexastack_template
+layers =
+    infra
+    adapters
+    ports
+    domain
+
+# 2. Pure Python Core: Domain cannot import outer framework layers
+[importlinter:contract:domain-purity]
+name = Domain Purity Guarantee
+type = forbidden
+source_modules =
+    hexastack_template.domain
+forbidden_modules =
+    hexastack_template.adapters
+    hexastack_template.infra
+    hexastack_template.ports
+
+# 3. Adapter Independence: Driving and Driven adapters communicate exclusively via Ports
+[importlinter:contract:adapter-independence]
+name = Adapter Independence
+type = independence
+modules =
+    hexastack_template.adapters.driving
+    hexastack_template.adapters.driven
