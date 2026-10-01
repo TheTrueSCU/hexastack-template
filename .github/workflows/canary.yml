@@ -1,0 +1,48 @@
+name: Canary Health & Drift Monitor
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Weekly Mondays at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  canary:
+    name: Canary Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Clean Cache & Refresh Dependencies
+        run: |
+          uv cache clean
+          uv sync --refresh --all-groups
+
+      - name: Run Sanity Suite
+        run: uv run hexaqual sanity
+
+      - name: Notify on Failure
+        if: failure() && github.event_name == 'schedule'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "🚨 Scheduled Canary Drift Alert: Dependency or Sanity Failure",
+              body: `Automated weekly canary check detected a failure on branch \`${context.ref}\`.\n\nWorkflow run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            });
