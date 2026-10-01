@@ -1,6 +1,8 @@
 """Property-based fuzzing tests for domain entities."""
 
-from hypothesis import given, strategies as st
+from hypothesis import given
+from hypothesis import strategies as st
+
 from hexastack_template.domain.models import Item
 
 

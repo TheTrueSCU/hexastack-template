@@ -1,7 +1,7 @@
 """Abstract storage repository ports."""
 
 from abc import ABC, abstractmethod
-from typing import Optional
+
 from hexastack_template.domain.models import Item
 
 
@@ -14,6 +14,6 @@ class ItemRepositoryPort(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def get_by_id(self, item_id: str) -> Optional[Item]:
+    def get_by_id(self, item_id: str) -> Item | None:
         """Retrieve an item by identifier."""
         raise NotImplementedError

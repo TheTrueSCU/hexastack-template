@@ -5,7 +5,8 @@ description = "Official enterprise Python hexagonal architecture template with C
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "hexastack[db,fastapi,qual,sentry,ui]>=0.7.0",
+    "hexastack[cli,db,fastapi,qual,sentry,ui]>=0.7.0",
+    "pydantic-settings>=2.0.0",
 ]
 
 [project.scripts]
@@ -18,6 +19,11 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "hexaqual[all]>=0.9.0",
+    "hypothesis>=6.168.3",
+    "pre-commit>=4.6.2",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.9",
+    "ty>=0.0.84",
 ]
 
 [tool.complexipy]
@@ -40,6 +46,9 @@ ignore = ["D100", "D104", "D107", "E501"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**/*.py" = ["ARG", "D", "E501", "S101", "S105"]
 
 [tool.pytest-gremlins]
 paths = ["src"]

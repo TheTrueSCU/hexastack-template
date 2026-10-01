@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and Environments
+.venv/
+env/
+venv/
+.cache/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ty_cache/
+.hypothesis/
+.complexipy_cache/
+.hexaflow/
+.import_linter_cache/
+.ropeproject/
+
+# Test & Coverage
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+junit.xml
+*.xml
+*.cover
+
+# Build & Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Database files & Local State
+*.db*
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# OS Specific
+.DS_Store
+Thumbs.db
+
+# Hexaqual managed agent assets (materialized via hexaqual agents sync)
+.agents/rules/hexaqual-*
+.agents/workflows/hexaqual-*
+.agents/skills/hexaqual_*

@@ -5,7 +5,9 @@ from hexastack_template.domain.models import Item
 from hexastack_template.ports.repositories import ItemRepositoryPort
 
 
-def handle_create_item(cmd: CreateItemCommand, repo: ItemRepositoryPort) -> ItemCreatedResponse:
+def handle_create_item(
+    cmd: CreateItemCommand, repo: ItemRepositoryPort
+) -> ItemCreatedResponse:
     """Handler processing CreateItemCommand."""
     item = Item(title=cmd.title, description=cmd.description)
     repo.save(item)

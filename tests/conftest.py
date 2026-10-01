@@ -1,6 +1,7 @@
 """Shared pytest fixtures."""
 
 import pytest
+
 from hexastack_template.adapters.driven.database import InMemoryItemRepository
 
 

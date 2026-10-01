@@ -8,7 +8,7 @@ class CreateItemCommand(Command):
     """Command to create a new domain item."""
 
     title: str
-    description: str = ''
+    description: str = ""
 
 
 class ItemCreatedResponse(BaseModel):
