@@ -620,16 +620,16 @@ all = [
 
 [[package]]
 name = "hexastack"
-version = "0.8.0"
+version = "0.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hexastack-core" },
     { name = "hexastack-cqrs" },
     { name = "hexastack-logging" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b1/70/2084adaa271062e5c9cfddaa796df749cbd334302cd5fd25fac1686aaccc/hexastack-0.8.0.tar.gz", hash = "sha256:21f15becc025c96dcc08685da6e84368d4c12db5b2f9bcb40fae6badc7682861", size = 44300, upload-time = "2026-10-08T06:20:52.983Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1d/c8/8af72564b058d255c5397de145cf6285a39f51e0c57d0228ba47049d5839/hexastack-0.9.0.tar.gz", hash = "sha256:d995404d9774a1c9456f44a0cb7995d0ca1f074d35e35314798b1c0bb2974493", size = 47296, upload-time = "2026-10-17T15:29:40.598Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d8/51/d4bd7db40c768c11340f598698ad0b393c94c9d85b23c1a00695d6df75ba/hexastack-0.8.0-py3-none-any.whl", hash = "sha256:e6e86ec6342a3849540a9e01a61cc7c90afb95be7555896bd6afd82352f74052", size = 64653, upload-time = "2026-10-08T06:20:35.227Z" },
+    { url = "https://files.pythonhosted.org/packages/59/33/ef75dcabd4492d7a8c614935af82b8240cb339f493318af008ecfc102ca6/hexastack-0.9.0-py3-none-any.whl", hash = "sha256:f4ffeab325175333008aad262fe52ebfbb0c646a1d36b79dfdd5fc1566c466dd", size = 64988, upload-time = "2026-10-17T15:29:19.921Z" },
 ]
 
 [package.optional-dependencies]
@@ -796,7 +796,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.8.0" },
+    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.9.0" },
     { name = "pydantic-settings", specifier = ">=2.0.0" },
 ]
 
