@@ -2,7 +2,7 @@
 
 from hexastack_template.adapters.driven.database import InMemoryItemRepository
 from hexastack_template.domain.commands import CreateItemCommand
-from hexastack_template.infra.handlers import handle_create_item
+from hexastack_template.infra.handlers import CreateItemHandler, handle_create_item
 
 
 def test_handle_create_item():
@@ -12,5 +12,17 @@ def test_handle_create_item():
     resp = handle_create_item(cmd, repo=repo)
     res_title = resp.title
     assert res_title == "Handled Item"
+    saved = repo.get_by_id(resp.id)
+    assert saved is not None
+
+
+def test_create_item_handler_class():
+    """Verify CreateItemHandler class processes command with injected repo."""
+    repo = InMemoryItemRepository()
+    handler = CreateItemHandler(repo=repo)
+    cmd = CreateItemCommand(title="Class Item", description="From class handler")
+    resp = handler(cmd)
+    res_title = resp.title
+    assert res_title == "Class Item"
     saved = repo.get_by_id(resp.id)
     assert saved is not None

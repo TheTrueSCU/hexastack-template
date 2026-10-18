@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:02.135
+1. Exploring Hexastack microservice commands and driving adapters
+
+2
+00:00:02.135 --> 00:00:03.770
+2. Dispatching CreateItemCommand through CQRS pipeline
+
+3
+00:00:03.770 --> 00:00:04.370
+3. Verifying domain state persistence across inverted storage port
+
+4
+00:00:04.370 --> 00:00:06.470
+4. Microservice verified with 100% test parity and zero architectural drift

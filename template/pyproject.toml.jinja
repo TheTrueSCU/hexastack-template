@@ -39,6 +39,9 @@ show_missing = true
 
 [tool.pytest.ini_options]
 addopts = "-n auto --import-mode=importlib --cov=src --cov-fail-under=90 --cov-report=term-missing"
+markers = [
+    "demo: Mark tests that demonstrate and record user journeys.",
+]
 
 [tool.ruff.lint]
 select = ["B", "D", "E", "F", "I", "S", "SIM", "UP", "W"]
