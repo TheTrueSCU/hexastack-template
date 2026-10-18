@@ -5,6 +5,7 @@
 .coverage
 .mutmut-cache
 .secrets.baseline
+.env*
 htmlcov
 dist
 build

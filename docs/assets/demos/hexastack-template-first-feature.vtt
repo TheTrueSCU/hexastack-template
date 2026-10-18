@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.500 --> 00:00:01.100
+1. Scaffolding new domain slice: Order entity & OrderRepositoryPort
+
+2
+00:00:01.100 --> 00:00:02.735
+2. Dispatching place-order driving command with items and total
+
+3
+00:00:02.735 --> 00:00:04.370
+3. Querying placed orders through list-orders driving command
+
+4
+00:00:04.370 --> 00:00:04.970
+4. Verifying order state in InMemoryOrderRepository adapter
+
+5
+00:00:04.970 --> 00:00:07.070
+5. Validating Hexagonal Architecture layer boundary isolation

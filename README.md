@@ -53,6 +53,19 @@ Experience the complete stack instantly in your browser (no local setup required
 
 Codespaces automatically provisions Python 3.13, `uv`, pre-configured VS Code extensions, and launches the FastAPI service and NiceGUI DevTools console.
 
+---
+
+## 🎬 Interactive Demos & User Journeys
+
+Explore verified terminal user journeys rendered headlessly via Playwright:
+
+| User Journey | Recording | Captions | Description |
+|---|---|---|---|
+| **HT-01: Quickstart Experience** | [`hexastack-template-quickstart.webm`](docs/assets/demos/hexastack-template-quickstart.webm) | [WebVTT Track](docs/assets/demos/hexastack-template-quickstart.vtt) | Clone-to-green initialization, CLI inspection, and CQRS command dispatch. |
+| **HT-02: Feature Slice Delivery** | [`hexastack-template-first-feature.webm`](docs/assets/demos/hexastack-template-first-feature.webm) | [WebVTT Track](docs/assets/demos/hexastack-template-first-feature.vtt) | Scaffolding an Order domain slice with 100% test parity and boundary verification. |
+
+---
+
 ## 🏛️ Architecture
 
 This project enforces clean **Ports & Adapters (Hexagonal Architecture)**:
