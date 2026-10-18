@@ -1,5 +1,6 @@
 # hexastack-template
 
+[![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-2ea44f?logo=github)](https://github.com/TheTrueSCU/hexastack-template/generate)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TheTrueSCU/hexastack-template?quickstart=1)
 [![CI](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml)
 [![Canary Drift Monitor](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml)
