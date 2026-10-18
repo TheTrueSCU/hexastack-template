@@ -1,0 +1,29 @@
+"""Hexastack bootstrapper and application assembly."""
+
+from typing import Any
+
+from hexastack_core.infra.bootstrap import bootstrap
+from hexastack_cqrs.infra.decorators import command_handler
+
+import {{ package_name }}.adapters.driving.cli
+import {{ package_name }}.adapters.driving.http
+from {{ package_name }}.adapters.driven.database import InMemoryItemRepository
+from {{ package_name }}.domain.commands import CreateItemCommand
+from {{ package_name }}.infra.handlers import handle_create_item
+from {{ package_name }}.ports.repositories import ItemRepositoryPort
+
+# Bind command handler
+command_handler(CreateItemCommand)(handle_create_item)
+
+
+def create_app() -> Any:
+    """Bootstrap full Hexastack microservice kernel."""
+    result = bootstrap(
+        packages_to_scan=[
+            {{ package_name }}.adapters.driving.cli,
+            {{ package_name }}.adapters.driving.http,
+        ],
+    )
+    repo = InMemoryItemRepository()
+    result.container.add_instance(repo, declared_class=ItemRepositoryPort)
+    return result

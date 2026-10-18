@@ -1,0 +1,9 @@
+"""Unit tests for adapters package initialization."""
+
+import {{ package_name }}.adapters
+
+
+def test_adapters_package_loaded():
+    """Verify subpackage imports cleanly."""
+    doc = {{ package_name }}.adapters.__doc__
+    assert doc is not None

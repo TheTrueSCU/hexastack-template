@@ -1,0 +1,14 @@
+"""Application CQRS command and query handlers."""
+
+from {{ package_name }}.domain.commands import CreateItemCommand, ItemCreatedResponse
+from {{ package_name }}.domain.models import Item
+from {{ package_name }}.ports.repositories import ItemRepositoryPort
+
+
+def handle_create_item(
+    cmd: CreateItemCommand, repo: ItemRepositoryPort
+) -> ItemCreatedResponse:
+    """Handler processing CreateItemCommand."""
+    item = Item(title=cmd.title, description=cmd.description)
+    repo.save(item)
+    return ItemCreatedResponse(id=item.id, title=item.title)
