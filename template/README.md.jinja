@@ -1,0 +1,65 @@
+# {{ project_name }}
+
+[![CI](https://github.com/{{ author_name | lower | replace(' ', '') }}/{{ project_slug }}/actions/workflows/ci.yml/badge.svg)](https://github.com/{{ author_name | lower | replace(' ', '') }}/{{ project_slug }}/actions/workflows/ci.yml)
+[![Hexastack](https://img.shields.io/badge/hexastack-v0.9.0-6366f1.svg)](https://github.com/TheTrueSCU/hexastack)
+[![Governed by Hexaqual](https://img.shields.io/badge/governed%20by-hexaqual-0ea5e9.svg)](https://github.com/TheTrueSCU/hexaqual)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+> {{ description }}
+
+Scaffolded with **[Hexastack](https://github.com/TheTrueSCU/hexastack)** — The Hexagonal Architecture Framework for Python.
+
+## 🏛️ Architecture
+
+This project enforces clean **Ports & Adapters (Hexagonal Architecture)**:
+
+```text
+src/{{ package_name }}/
+├── domain/                      # 100% Pure Python Entities, Value Objects & CQRS Messages
+│   ├── models.py
+│   └── commands.py
+├── ports/                       # Inverted Interfaces (Abstract Repositories & Gateways)
+│   └── repositories.py
+├── adapters/
+│   ├── driving/                 # INBOUND Adapters (HTTP REST, CLI, UI)
+│   │   ├── cli.py
+│   │   └── http.py
+│   └── driven/                  # OUTBOUND Adapters (Database, Outbox, External APIs)
+│       └── database.py
+└── infra/                       # Kernel, Bootstrapper & Dependency Injection
+    ├── bootstrap.py
+    └── config.py
+```
+
+## 🛠️ Getting Started
+
+### Local Setup
+
+```bash
+# 1. Install dependencies & pre-commit hooks
+uv sync --all-groups
+uv run pre-commit install
+
+# 2. Run test suite & coverage (>=90%)
+uv run pytest
+
+# 3. Launch interactive development environment (FastAPI + NiceGUI DevTools)
+uv run {{ project_slug }} dev
+```
+
+### Endpoints & DevTools
+
+- **API Documentation (Swagger UI)**: `http://localhost:8000/docs`
+- **ReDoc**: `http://localhost:8000/redoc`
+- **Reactive DevTools Console**: `http://localhost:8000/devtools`
+- **Health Check**: `http://localhost:8000/healthz`
+
+---
+
+## 🔄 Updating from Template Upstream
+
+This service was created with [**Copier**](https://copier.readthedocs.io/). To pull upstream improvements and template updates:
+
+```bash
+uvx copier update
+```

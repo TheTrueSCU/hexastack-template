@@ -1,0 +1,34 @@
+[importlinter]
+root_package = {{ package_name }}
+include_type_checking = False
+
+# 1. Strict Dependency Inversion: Infra -> Adapters -> Ports -> Domain
+[importlinter:contract:hexagonal-layers]
+name = Hexagonal Architecture Layers
+type = layers
+containers =
+    {{ package_name }}
+layers =
+    infra
+    adapters
+    ports
+    domain
+
+# 2. Pure Python Core: Domain cannot import outer framework layers
+[importlinter:contract:domain-purity]
+name = Domain Purity Guarantee
+type = forbidden
+source_modules =
+    {{ package_name }}.domain
+forbidden_modules =
+    {{ package_name }}.adapters
+    {{ package_name }}.infra
+    {{ package_name }}.ports
+
+# 3. Adapter Independence: Driving and Driven adapters communicate exclusively via Ports
+[importlinter:contract:adapter-independence]
+name = Adapter Independence
+type = independence
+modules =
+    {{ package_name }}.adapters.driving
+    {{ package_name }}.adapters.driven

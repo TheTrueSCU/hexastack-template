@@ -1,0 +1,58 @@
+[project]
+name = "{{ project_slug }}"
+version = "0.1.0"
+description = "{{ description }}"
+readme = "README.md"
+requires-python = "{{ python_version }}"
+dependencies = [
+    "hexastack[cli,qual{% if include_cqrs %},cqrs{% endif %}{% if include_db %},db{% endif %}{% if include_fastapi %},fastapi{% endif %}{% if include_ui %},ui{% endif %}{% if include_sentry %},sentry{% endif %}{% if include_ai %},ai{% endif %}]>=0.9.0",
+    "pydantic-settings>=2.0.0",
+]
+
+[project.scripts]
+{{ project_slug }} = "{{ package_name }}.adapters.driving.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "hexaqual[all]>=0.9.0",
+    "hypothesis>=6.168.3",
+    "pre-commit>=4.6.2",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.9",
+    "ty>=0.0.84",
+]
+
+[tool.complexipy]
+max_complexity_allowed = 25
+
+[tool.coverage.run]
+source = ["src/"]
+omit = ["*/tests/*"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "-n auto --import-mode=importlib --cov=src --cov-fail-under=90 --cov-report=term-missing"
+
+[tool.ruff.lint]
+select = ["B", "D", "E", "F", "I", "S", "SIM", "UP", "W"]
+ignore = ["D100", "D104", "D107", "E501"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**/*.py" = ["ARG", "D", "E501", "S101", "S105"]
+
+[tool.pytest-gremlins]
+paths = ["src"]
+operators = ["arithmetic", "boolean", "boundary", "comparison", "return"]
+workers = "auto"
+batch_size = 10
+cache = true

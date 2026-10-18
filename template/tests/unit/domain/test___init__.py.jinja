@@ -1,0 +1,9 @@
+"""Unit tests for domain package initialization."""
+
+import {{ package_name }}.domain
+
+
+def test_domain_package_loaded():
+    """Verify subpackage imports cleanly."""
+    doc = {{ package_name }}.domain.__doc__
+    assert doc is not None

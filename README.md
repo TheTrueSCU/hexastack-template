@@ -3,13 +3,46 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TheTrueSCU/hexastack-template?quickstart=1)
 [![CI](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml)
 [![Canary Drift Monitor](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml)
-[![Hexastack](https://img.shields.io/badge/hexastack-v0.7.0-6366f1.svg)](https://github.com/TheTrueSCU/hexastack)
+[![Hexastack](https://img.shields.io/badge/hexastack-v0.9.0-6366f1.svg)](https://github.com/TheTrueSCU/hexastack)
 [![Governed by Hexaqual](https://img.shields.io/badge/governed%20by-hexaqual-0ea5e9.svg)](https://github.com/TheTrueSCU/hexaqual)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> Official enterprise Python hexagonal architecture template with CQRS, FastAPI, NiceGUI DevTools, and Day-1 AI guardrails.
+> Official enterprise Python hexagonal architecture template with Copier support, CQRS, FastAPI, NiceGUI DevTools, and Day-1 AI guardrails.
 
 Scaffolded with **[Hexastack](https://github.com/TheTrueSCU/hexastack)** — The Hexagonal Architecture Framework for Python.
+
+## ⚡ Quickstart with Copier (Recommended)
+
+Generate a production-grade microservice with customizable project name, slug, author, and subpackage modules:
+
+```bash
+# 1. Generate project interactively via Copier
+uvx copier copy gh:TheTrueSCU/hexastack-template my-service
+
+# 2. Change into the generated project directory
+cd my-service
+
+# 3. Install dependencies and initialize Git hooks
+uv sync --all-groups
+uv run pre-commit install
+
+# 4. Run full test suite & coverage (>=90%)
+uv run pytest
+
+# 5. Launch interactive development environment (FastAPI + NiceGUI DevTools)
+uv run my-service dev
+```
+
+### Upstream Template Updates
+
+Projects generated with Copier can pull downstream template enhancements, security improvements, and dependency updates:
+
+```bash
+cd my-service
+uvx copier update
+```
+
+---
 
 ## 🚀 1-Click Cloud Workspace
 
@@ -17,7 +50,7 @@ Experience the complete stack instantly in your browser (no local setup required
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TheTrueSCU/hexastack-template?quickstart=1)
 
-Codespaces automatically provisions Python 3.12, `uv`, pre-configured VS Code extensions, and launches the FastAPI service and NiceGUI DevTools console.
+Codespaces automatically provisions Python 3.13, `uv`, pre-configured VS Code extensions, and launches the FastAPI service and NiceGUI DevTools console.
 
 ## 🏛️ Architecture
 

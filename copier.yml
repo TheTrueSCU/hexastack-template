@@ -1,0 +1,131 @@
+# ==============================================================================
+# Hexastack Official Enterprise Template Configuration (Copier)
+# Documentation: https://copier.readthedocs.io/
+# ==============================================================================
+
+_min_copier_version: "9.0.0"
+_subdirectory: template
+_answers_file: .copier-answers.yml
+_templates_suffix: .jinja
+
+_exclude:
+  - ".git"
+  - ".git/**"
+  - ".venv"
+  - ".venv/**"
+  - ".pytest_cache"
+  - ".pytest_cache/**"
+  - ".ruff_cache"
+  - ".ruff_cache/**"
+  - ".complexipy_cache"
+  - ".complexipy_cache/**"
+  - ".coverage"
+  - "*.pyc"
+  - "__pycache__"
+  - "__pycache__/**"
+  - "*.egg-info"
+  - "*.egg-info/**"
+
+# ------------------------------------------------------------------------------
+# Project Identity & Metadata
+# ------------------------------------------------------------------------------
+
+project_name:
+  type: str
+  help: "Human-readable name of the service"
+  default: "Hexastack Service"
+
+project_slug:
+  type: str
+  help: "Project repository and directory slug (kebab-case)"
+  default: "{{ project_name | lower | replace(' ', '-') | replace('_', '-') }}"
+  validator: >-
+    {% if not project_slug %}
+      project_slug must not be empty.
+    {% endif %}
+
+package_name:
+  type: str
+  help: "Python package import name (snake_case)"
+  default: "{{ project_slug | replace('-', '_') }}"
+  validator: >-
+    {% if not package_name.isidentifier() %}
+      '{{ package_name }}' is not a valid Python package identifier.
+    {% endif %}
+
+description:
+  type: str
+  help: "Short description of the service"
+  default: "Enterprise Python hexagonal architecture service scaffolded with Hexastack."
+
+author_name:
+  type: str
+  help: "Primary author / team name"
+  default: "Hexastack Team"
+
+author_email:
+  type: str
+  help: "Primary author contact email"
+  default: "team@example.com"
+
+python_version:
+  type: str
+  help: "Minimum Python version required"
+  default: ">=3.13"
+
+# ------------------------------------------------------------------------------
+# Hexastack Subpackages & Feature Flags
+# ------------------------------------------------------------------------------
+
+include_cqrs:
+  type: bool
+  help: "Include CQRS command & query buses and handlers (hexastack[cqrs])"
+  default: true
+
+include_fastapi:
+  type: bool
+  help: "Include FastAPI REST presentation adapter and routes (hexastack[fastapi])"
+  default: true
+
+include_db:
+  type: bool
+  help: "Include SQLAlchemy database repository & UnitOfWork adapter (hexastack[db])"
+  default: true
+
+include_ui:
+  type: bool
+  help: "Include NiceGUI interactive DevTools console (hexastack[ui])"
+  default: true
+
+include_sentry:
+  type: bool
+  help: "Include Sentry distributed error tracking & tracing (hexastack[sentry])"
+  default: false
+
+include_ai:
+  type: bool
+  help: "Include LLM AI agents, memory adapters, and tool executors (hexastack[ai])"
+  default: false
+
+# ------------------------------------------------------------------------------
+# Lifecycle Messages & Instructions
+# ------------------------------------------------------------------------------
+
+_message_after_copy: >-
+  🎉 Hexastack microservice '{{ project_slug }}' created successfully!
+
+  Next steps:
+    1. cd {{ _copier_conf.dst_path.name if _copier_conf.dst_path else '.' }}
+    2. uv sync --all-groups
+    3. uv run pre-commit install
+    4. uv run pytest
+    5. uv run {{ project_slug }} dev
+
+  Documentation & Architecture:
+    - FastAPI Docs:     http://localhost:8000/docs
+    - DevTools Console: http://localhost:8000/devtools
+    - Upstream Updates: uvx copier update
+
+_message_after_update: >-
+  🔄 Hexastack template update applied successfully!
+  Please review git diff, run 'uv run pytest', and verify all hexagonal boundary invariants.
