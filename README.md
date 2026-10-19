@@ -4,7 +4,8 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/TheTrueSCU/hexastack-template?quickstart=1)
 [![CI](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml)
 [![Canary Drift Monitor](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml)
-[![Hexastack](https://img.shields.io/badge/hexastack-v0.9.0-6366f1.svg)](https://github.com/TheTrueSCU/hexastack)
+[![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](https://github.com/TheTrueSCU/hexastack-template)
+[![Hexastack](https://img.shields.io/static/v1?label=hexastack&message=v0.9.0&color=6366f1)](https://github.com/TheTrueSCU/hexastack)
 [![Governed by Hexaqual](https://img.shields.io/badge/governed%20by-hexaqual-0ea5e9.svg)](https://github.com/TheTrueSCU/hexaqual)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
