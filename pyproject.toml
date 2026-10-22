@@ -10,7 +10,7 @@ dependencies = [
 ]
 
 [project.scripts]
-hexastack-template = "hexastack_template.adapters.driving.cli:main"
+hexastack-template = "hexastack_template.entrypoint:main"
 
 [build-system]
 requires = ["hatchling"]

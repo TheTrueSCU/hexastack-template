@@ -56,8 +56,7 @@ def test_copier_default_generation() -> None:
         pyproject_text = pyproject.read_text(encoding="utf-8")
         assert 'name = "hexastack-service"' in pyproject_text
         assert (
-            'hexastack-service = "hexastack_service.adapters.driving.cli:main"'
-            in pyproject_text
+            'hexastack-service = "hexastack_service.entrypoint:main"' in pyproject_text
         )
 
         # Check hexagonal test symmetry and boundary files
