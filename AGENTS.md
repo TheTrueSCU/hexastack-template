@@ -9,9 +9,11 @@
 - [hexaqual-docstrings.md](.agents/rules/hexaqual-docstrings.md)
 - [hexaqual-documentation.md](.agents/rules/hexaqual-documentation.md)
 - [hexaqual-hermetic-testing.md](.agents/rules/hexaqual-hermetic-testing.md)
+- [hexaqual-lazy-imports.md](.agents/rules/hexaqual-lazy-imports.md)
 - [hexaqual-modifications.md](.agents/rules/hexaqual-modifications.md)
 - [hexaqual-openssf.md](.agents/rules/hexaqual-openssf.md)
 - [hexaqual-property-testing.md](.agents/rules/hexaqual-property-testing.md)
+- [hexaqual-reanchoring.md](.agents/rules/hexaqual-reanchoring.md)
 - [hexaqual-security.md](.agents/rules/hexaqual-security.md)
 - [hexaqual-sync.md](.agents/rules/hexaqual-sync.md)
 - [hexaqual-test-authoring.md](.agents/rules/hexaqual-test-authoring.md)
@@ -35,4 +37,5 @@
 
 - [hexaqual_audit_complexity.py](.agents/skills/hexaqual_audit_complexity.py)
 - [hexaqual_audit_docstrings.py](.agents/skills/hexaqual_audit_docstrings.py)
+- [hexaqual_audit_lazy_imports.py](.agents/skills/hexaqual_audit_lazy_imports.py)
 - [hexaqual_scaffold_test_parity.py](.agents/skills/hexaqual_scaffold_test_parity.py)

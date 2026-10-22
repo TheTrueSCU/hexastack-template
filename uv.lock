@@ -731,7 +731,7 @@ wheels = [
 
 [[package]]
 name = "hexaqual"
-version = "0.9.3"
+version = "0.9.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "complexipy" },
@@ -748,15 +748,16 @@ dependencies = [
     { name = "rich" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b9/ee/09f012a0593e7567114e808eba667762a25d8469b1987255c966c0fb9af5/hexaqual-0.9.3.tar.gz", hash = "sha256:f7cd7dc9ff9d747798a87f7d78d3b9d35e3afd10ebed50998f82a3d36e008185", size = 6524256, upload-time = "2026-10-19T19:26:23.341Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d4/61/726dd4f704113a958fbae98808e2de6efe49097cf59e9c59621bb4b03ed4/hexaqual-0.9.6.tar.gz", hash = "sha256:2c5f5b7ee47fac65f2ffa7d8dec73f03d87e84ee9c23e4585ee1b88b9285fe13", size = 6541244, upload-time = "2026-10-22T15:24:18.713Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/21/12/209a23f442a58446f5a7a172a7036daf11453a22b80936dbcaa56620b35a/hexaqual-0.9.3-py3-none-any.whl", hash = "sha256:85c5b16e28f6129da992e22fad8f26138a4cf4ccba436eeddfad8c08d438ea54", size = 289845, upload-time = "2026-10-19T19:26:21.347Z" },
+    { url = "https://files.pythonhosted.org/packages/36/56/a0120079505df5d63af476065991c5fc58a8f56a42ca51bc4e42f32557b3/hexaqual-0.9.6-py3-none-any.whl", hash = "sha256:b8f21aba4b041c6bc92fca5a364071d74b5c2fe82abfc76165b8634ac031c5d5", size = 296727, upload-time = "2026-10-22T15:24:16.782Z" },
 ]
 
 [package.optional-dependencies]
 all = [
     { name = "mutmut" },
     { name = "pydeps" },
+    { name = "pytest-benchmark" },
     { name = "pytest-gremlins" },
     { name = "pytest-xdist" },
     { name = "rope" },
@@ -950,7 +951,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "copier", specifier = ">=9.19.0" },
-    { name = "hexaqual", extras = ["all"], specifier = ">=0.9.3" },
+    { name = "hexaqual", extras = ["all"], specifier = ">=0.9.6" },
     { name = "hypothesis", specifier = ">=6.168.3" },
     { name = "playwright", specifier = ">=1.50.0" },
     { name = "pre-commit", specifier = ">=4.6.2" },
@@ -1782,6 +1783,15 @@ wheels = [
 ]
 
 [[package]]
+name = "py-cpuinfo2"
+version = "10.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/dc/97/a8b1ddada14c8280a047c0746f95cb05d94a31b1a331cea22bcdc2b2a82d/py_cpuinfo2-10.1.1.tar.gz", hash = "sha256:7861133863663f16e06eca63b12904ef100b5760415e92372dac0162799a4771", size = 100840, upload-time = "2026-03-25T21:49:40.797Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/23/0a/ba69d2dde1ae12ef1d389ea5a216384c5ff6ef7a1e7a48d1e9b6686f6790/py_cpuinfo2-10.1.1-py3-none-any.whl", hash = "sha256:adc53396bfb206e6498d078ec2ab407f85799ecd819584ac36a8f80a2d4d762d", size = 23791, upload-time = "2026-03-25T21:49:39.574Z" },
+]
+
+[[package]]
 name = "pydantic"
 version = "2.13.5"
 source = { registry = "https://pypi.org/simple" }
@@ -1925,6 +1935,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/42/da/8132aa99cee223c7c5b330ffb4bd8094343239774f917e71a21f74d52009/pytest_archon-0.0.7.tar.gz", hash = "sha256:6a1e814c84adbea4afc188369733ec898f2525cc401f3ca965498f8b3ee454d5", size = 48359, upload-time = "2025-09-19T20:56:24.784Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/98/81/a46c239c77d4ec4e3450d463517ff63f10c22962c037ca2b4125394cf400/pytest_archon-0.0.7-py3-none-any.whl", hash = "sha256:5aaad17cff853d058ca686dd1da425ce884daf33ae9668011323173631dc4e94", size = 44868, upload-time = "2025-09-19T20:56:23.16Z" },
+]
+
+[[package]]
+name = "pytest-benchmark"
+version = "5.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "py-cpuinfo2" },
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/63/8f/83a15e40dbc34a580ee56eb56983cae5394c6e94d50cf28fe268e457be25/pytest_benchmark-5.3.0.tar.gz", hash = "sha256:358444d4e89be901ee2b6404fb043ac3d7684002ad7f3563cc153fca6339c965", size = 375410, upload-time = "2026-08-23T17:45:08.891Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/eb/42/7e80f7cfa191e0a766d1de99b4661847415ad5db34f8209d81fd42175b59/pytest_benchmark-5.3.0-py3-none-any.whl", hash = "sha256:920ab1dfcffa718d49aa15ba144c7e357bda59216a0dc308016cc1c7236f719d", size = 48401, upload-time = "2026-08-23T17:45:07.094Z" },
 ]
 
 [[package]]
@@ -2603,7 +2626,7 @@ wheels = [
 
 [[package]]
 name = "virtualenv"
-version = "21.14.1"
+version = "21.14.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "distlib" },
@@ -2612,9 +2635,9 @@ dependencies = [
     { name = "platformdirs" },
     { name = "python-discovery" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/50/67/b5d37693e5e666b68100db8fe34f00db28279330db55f739a3c799ff2449/virtualenv-21.14.1.tar.gz", hash = "sha256:719b189804e66678017d9f63bbfc590c44f6b96ab4829513806394f9b375929c", size = 5462838, upload-time = "2026-09-29T23:33:33.991Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c9/2c/1a69b3346931e9a7db9cc00cc0fa847c843a85fa7cf52a598f57261c68df/virtualenv-21.14.12.tar.gz", hash = "sha256:bbcfb78e36c22ad70c6917c4aecb5e63477d3c138e9f88c946f320e31859c76a", size = 5562800, upload-time = "2026-10-21T01:58:51.724Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/a8/22be2d14ef0d7b1e9e7dc1d839a85073fc20917be1747d6f1347d1cfc8c3/virtualenv-21.14.1-py3-none-any.whl", hash = "sha256:6fd04089fc0dc33549e7abdff70fc3b63d4e15799f2dbf3281f80d13b9fce522", size = 5486534, upload-time = "2026-09-29T23:33:32.333Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/92/f3b8af2d36ddec4dc61dc25655dc010e419ff456cb4ca0e720c8112f1047/virtualenv-21.14.12-py3-none-any.whl", hash = "sha256:7820aeaef23f1f59a96458edfc7f9d3deac937155718de15f1c9a64471e15551", size = 5556824, upload-time = "2026-10-21T01:58:48.505Z" },
 ]
 
 [[package]]
