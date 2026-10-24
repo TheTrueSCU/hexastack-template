@@ -5,7 +5,7 @@ description = "Official enterprise Python hexagonal architecture template with C
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "hexastack[cli,db,fastapi,qual,sentry,ui]>=0.10.0",
+    "hexastack[cli,db,fastapi,qual,sentry,ui]>=0.10.1",
     "pydantic-settings>=2.0.0",
 ]
 
