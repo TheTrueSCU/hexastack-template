@@ -71,7 +71,7 @@ author_email:
 python_version:
   type: str
   help: "Minimum Python version required"
-  default: ">=3.13"
+  default: ">=3.12"
 
 # ------------------------------------------------------------------------------
 # Hexastack Subpackages & Feature Flags

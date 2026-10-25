@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 
 import pytest
-from hexastack_cli.testing.narrator import CliNarrator
+from hexaqual.adapters.testing.narrator import CliNarrator
 
 from hexastack_template.infra.bootstrap import create_app
 from hexastack_template.ports.repositories import ItemRepositoryPort

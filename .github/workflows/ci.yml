@@ -39,9 +39,13 @@ jobs:
         run: uv run hexaqual docs drift
 
   test-suite:
-    name: Unit & Architecture Tests
+    name: Unit & Architecture Tests (Python ${{ matrix.python-version }})
     needs: [quality-gate]
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -54,7 +58,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: ${{ matrix.python-version }}
 
       - name: Install Dependencies
         run: uv sync --all-groups

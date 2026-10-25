@@ -17,7 +17,7 @@ from typing import Annotated
 
 import pytest
 import typer
-from hexastack_cli.testing.narrator import CliNarrator
+from hexaqual.adapters.testing.narrator import CliNarrator
 from hexastack_core.testing import assert_clean_architecture
 
 

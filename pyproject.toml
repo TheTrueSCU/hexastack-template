@@ -3,7 +3,7 @@ name = "hexastack-template"
 version = "0.1.0"
 description = "Official enterprise Python hexagonal architecture template with CQRS, FastAPI, NiceGUI DevTools, and Day-1 AI guardrails."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "hexastack[cli,db,fastapi,qual,sentry,ui]>=0.10.1",
     "pydantic-settings>=2.0.0",
@@ -19,7 +19,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "copier>=9.19.0",
-    "hexaqual[all]>=0.9.6",
+    "hexaqual[all]>=0.9.7",
     "hypothesis>=6.168.3",
     "playwright>=1.50.0",
     "pre-commit>=4.6.2",
@@ -65,3 +65,6 @@ operators = ["arithmetic", "boolean", "boundary", "comparison", "return"]
 workers = "auto"
 batch_size = 10
 cache = true
+
+[tool.deptry.per_rule_ignores]
+DEP001 = ["nox"]
