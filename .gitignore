@@ -50,3 +50,4 @@ Thumbs.db
 .agents/rules/hexaqual-*
 .agents/workflows/hexaqual-*
 .agents/skills/hexaqual_*
+.benchmarks_history/

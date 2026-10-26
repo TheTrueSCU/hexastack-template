@@ -5,7 +5,7 @@ description = "{{ description }}"
 readme = "README.md"
 requires-python = "{{ python_version }}"
 dependencies = [
-    "hexastack[cli,qual{% if include_cqrs %},cqrs{% endif %}{% if include_db %},db{% endif %}{% if include_fastapi %},fastapi{% endif %}{% if include_ui %},ui{% endif %}{% if include_sentry %},sentry{% endif %}{% if include_ai %},ai{% endif %}]>=0.10.0",
+    "hexastack[cli,qual{% if include_cqrs %},cqrs{% endif %}{% if include_db %},db{% endif %}{% if include_fastapi %},fastapi{% endif %}{% if include_ui %},ui{% endif %}{% if include_sentry %},sentry{% endif %}{% if include_ai %},ai{% endif %}]>=0.10.1",
     "pydantic-settings>=2.0.0",
 ]
 
@@ -18,7 +18,7 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 dev = [
-    "hexaqual[all]>=0.9.6",
+    "hexaqual[all]>=0.9.8",
     "hypothesis>=6.168.3",
     "pre-commit>=4.6.2",
     "pytest-cov>=7.1.0",
