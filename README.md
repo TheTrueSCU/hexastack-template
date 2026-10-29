@@ -5,7 +5,7 @@
 [![CI](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/ci.yml)
 [![Canary Drift Monitor](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml/badge.svg)](https://github.com/TheTrueSCU/hexastack-template/actions/workflows/canary.yml)
 [![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](https://github.com/TheTrueSCU/hexastack-template)
-[![Hexastack](https://img.shields.io/static/v1?label=hexastack&message=v0.10.1&color=6366f1)](https://github.com/TheTrueSCU/hexastack)
+[![Hexastack](https://img.shields.io/static/v1?label=hexastack&message=v0.11.0&color=6366f1)](https://github.com/TheTrueSCU/hexastack)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![Governed by Hexaqual](https://img.shields.io/badge/governed%20by-hexaqual-0ea5e9.svg)](https://github.com/TheTrueSCU/hexaqual)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
