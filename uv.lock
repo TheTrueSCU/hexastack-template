@@ -855,7 +855,7 @@ all = [
 
 [[package]]
 name = "hexastack"
-version = "0.10.1"
+version = "0.11.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hexastack-core", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13'" },
@@ -865,9 +865,9 @@ dependencies = [
     { name = "hexastack-logging", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.13'" },
     { name = "hexastack-logging", version = "0.10.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.13'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/31/5312ac4680be6506d62fd292fa17e91544f41b5601bad0a7f94a1b5dbde9/hexastack-0.10.1.tar.gz", hash = "sha256:8fd456e12188918c8b438cd13ab6d95df106bc50ba592e63feca28d6e11f52b3", size = 48748, upload-time = "2026-10-24T21:10:57.929Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7f/e0/6a7d1b273581ae09b6e9ec8995568a47a5586e2b5f83c546ceadb416225e/hexastack-0.11.3.tar.gz", hash = "sha256:1f21c31282be2cd2d97ff35000c6de61fc26424525b929c8f0aea06a1ea326a7", size = 49260, upload-time = "2026-11-12T01:07:29.472Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/56/56/f089001803e27a62c3ef67d5966e99773f4d07f1c56d4648adf0b4ea096c/hexastack-0.10.1-py3-none-any.whl", hash = "sha256:4ea22539c53a07f0afdf5d267908ec0d8b44d3075b6b87117d98666c634e44e5", size = 67415, upload-time = "2026-10-24T21:10:39.297Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/97/ebdd08c6affece175038a550f7f9186ccdee00d180660f39e7e55e55e035/hexastack-0.11.3-py3-none-any.whl", hash = "sha256:e57d47ca20cd8fde955f19759ce0e1cae9a76efa85d5e0c228e6a188caa60a17", size = 67665, upload-time = "2026-11-12T01:07:02.946Z" },
 ]
 
 [package.optional-dependencies]
@@ -1221,7 +1221,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.10.1" },
+    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.11.3" },
     { name = "pydantic-settings", specifier = ">=2.0.0" },
 ]
 
