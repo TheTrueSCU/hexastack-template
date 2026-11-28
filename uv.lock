@@ -1086,16 +1086,16 @@ wheels = [
 
 [[package]]
 name = "hexastack"
-version = "0.11.3"
+version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hexastack-core" },
     { name = "hexastack-cqrs" },
     { name = "hexastack-logging" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7f/e0/6a7d1b273581ae09b6e9ec8995568a47a5586e2b5f83c546ceadb416225e/hexastack-0.11.3.tar.gz", hash = "sha256:1f21c31282be2cd2d97ff35000c6de61fc26424525b929c8f0aea06a1ea326a7", size = 49260, upload-time = "2026-11-12T01:07:29.472Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b7/87/564d17b0f153be4f89b52135676dedfd42c88adf5b28d54bb431d0d9be05/hexastack-0.13.0.tar.gz", hash = "sha256:4563b3d14f45f72a4ec9ba691c7a2b50c5be9c0febc3c3646e2e7310af0c746e", size = 49405, upload-time = "2026-11-28T15:07:46.007Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/97/ebdd08c6affece175038a550f7f9186ccdee00d180660f39e7e55e55e035/hexastack-0.11.3-py3-none-any.whl", hash = "sha256:e57d47ca20cd8fde955f19759ce0e1cae9a76efa85d5e0c228e6a188caa60a17", size = 67665, upload-time = "2026-11-12T01:07:02.946Z" },
+    { url = "https://files.pythonhosted.org/packages/df/f8/c22625fb884ed0d0fd49c435ea852917c06a56a743f413eb076acedcfb7e/hexastack-0.13.0-py3-none-any.whl", hash = "sha256:4636147485d9a3a18809ab28430b4e87fd3f398f16957981d61efa988636301a", size = 67734, upload-time = "2026-11-28T15:07:30.438Z" },
 ]
 
 [package.optional-dependencies]
@@ -1153,29 +1153,29 @@ wheels = [
 
 [[package]]
 name = "hexastack-core"
-version = "0.11.3"
+version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pydantic" },
     { name = "rodi" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ce/bd/55738031fca738fa32adefadeb1cc2d9a4fa4b6725d0dc43f2b8c5e0ac78/hexastack_core-0.11.3.tar.gz", hash = "sha256:88757cce484ad8a89a828e32410bd1817899281b779ddcde3058cc362a5f4546", size = 81357, upload-time = "2026-11-12T01:07:37.119Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/35/12/473c08f08307f324f93df4fafd453c69b8270c7aec1a0c4af095e0ca8a2e/hexastack_core-0.13.0.tar.gz", hash = "sha256:d43cf384e137ff7a54401ddc7ca97255fbd1f91699a3d632c06ee6a7a1989436", size = 89052, upload-time = "2026-11-28T15:07:48.626Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3c/0c/7a8e36e60e971042796c9c905dffd33ce6f68060d1dc98e7e336d9efaf6b/hexastack_core-0.11.3-py3-none-any.whl", hash = "sha256:68b9c57b354c06871958c9d967f8da2bc860b8938da65609bd3dbbb26a5309e7", size = 123376, upload-time = "2026-11-12T01:07:08.16Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/3b/296cf6d172b354c301fa605f6b2530fc5af23f00a990eaddba2df9854f76/hexastack_core-0.13.0-py3-none-any.whl", hash = "sha256:44fdf10249a11a5200b2857f9cca9bcab82668cdcc7e9d555a291a8a1c56bd1d", size = 135390, upload-time = "2026-11-28T15:07:34.356Z" },
 ]
 
 [[package]]
 name = "hexastack-cqrs"
-version = "0.11.3"
+version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hexastack-core" },
     { name = "stamina" },
     { name = "tenacity" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/90/897dfdc8433e84232fb586c10e020b1c14699d21424a887f6dffa8d72e2d/hexastack_cqrs-0.11.3.tar.gz", hash = "sha256:467bbd3dc187fe2ce23277756867eb2ba730f0a1f49e8b70bbc6cb914840e260", size = 32388, upload-time = "2026-11-12T01:07:39.285Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/41/ef/7c95817004cfd3e92e864890c1e74762b6d3fea362bcc525a03c8595fd53/hexastack_cqrs-0.13.0.tar.gz", hash = "sha256:aea7819c8bf9c1ebdc41558e865adba1af6a1ded1a3e8350114266c4652af3f7", size = 32466, upload-time = "2026-11-28T15:07:49.284Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/1e/763311ea5e94a2287851b619070db27cd1818b9faa44e179ae06aafe4de4/hexastack_cqrs-0.11.3-py3-none-any.whl", hash = "sha256:06e7aaf0d5bd244535bf76a690e36e9834b832befd47760c6b949807827f052e", size = 51444, upload-time = "2026-11-12T01:07:09.403Z" },
+    { url = "https://files.pythonhosted.org/packages/3f/0a/539603c6f368392770b1353c4f1ca8bd2a6bfa0bb67259a776044b530c3e/hexastack_cqrs-0.13.0-py3-none-any.whl", hash = "sha256:2f99537135b64d8fbd7505a18f6fe8f28711c6d634582645fe1f7c66f72a9101", size = 51490, upload-time = "2026-11-28T15:07:35.423Z" },
 ]
 
 [[package]]
@@ -1243,14 +1243,14 @@ db = [
 
 [[package]]
 name = "hexastack-logging"
-version = "0.11.3"
+version = "0.13.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "hexastack-core" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/24/5d/7110597dfbdc3492a1216dabc8e8ec34f6a3e48b643557ba8f560cbc81c8/hexastack_logging-0.11.3.tar.gz", hash = "sha256:c71c186e417f5921bfe2319f8f5075284dd0ff74ab1dca84da238682c20b9a12", size = 17607, upload-time = "2026-11-12T01:07:49.811Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b7/f8/00816cf03f04d7696869b0dbe4518e580c0ff7a523ef9ed143972a45ab0b/hexastack_logging-0.13.0.tar.gz", hash = "sha256:adf19fa74d8277d9e1fc29c8f9450e6c7b5e49f902997a71a0abf272e1f31946", size = 17605, upload-time = "2026-11-28T15:07:53.395Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/ba/53f796b61e99cd99849e178474f71d6b4623c87209311f4681194d56db30/hexastack_logging-0.11.3-py3-none-any.whl", hash = "sha256:18295e5a4aee7402c406b1483cb5e3dfb3dd0ba703d19ab87111182161ecc19d", size = 25867, upload-time = "2026-11-12T01:07:22.074Z" },
+    { url = "https://files.pythonhosted.org/packages/89/98/8b3d40d4e831af7a5ecf9a40b7405b153578cfbc52bf524e35a69c45caff/hexastack_logging-0.13.0-py3-none-any.whl", hash = "sha256:eac990afd05d9c1af6e66e559eefebc56405c1dbb260e6730d2a3241726016b2", size = 25873, upload-time = "2026-11-28T15:07:42.124Z" },
 ]
 
 [package.optional-dependencies]
@@ -1296,7 +1296,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.11.3" },
+    { name = "hexastack", extras = ["cli", "db", "fastapi", "qual", "sentry", "ui"], specifier = ">=0.13.0" },
     { name = "pydantic-settings", specifier = ">=2.0.0" },
 ]
 
